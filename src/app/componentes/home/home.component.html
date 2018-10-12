@@ -7,6 +7,13 @@
         <th>Pokemon</th>
         <th>Nro de Pokedex</th>
       </tr>
+      <ul *ngFor="let pokemon of pokemones">
+        <tr>
+        <td> <img src="{{pokemon.art_url}}" alt=""></td>
+        <td>{{pokemon.name}}</td>
+        <td>{{pokemon.national_id}}</td>
+      </tr>
+      </ul>
     </thead>
     <tbody>
     </tbody>

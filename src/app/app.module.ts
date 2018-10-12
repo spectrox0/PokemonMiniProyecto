@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { DetallesComponent } from './componentes/detalles/detalles.component';
+import { ServiceService } from './servicios/pokefinder';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,10 @@ import { DetallesComponent } from './componentes/detalles/detalles.component';
   imports: [
     BrowserModule,
     TooltipModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from 'src/app/servicios/pokefinder';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+   pokemones = [];
+
+  constructor(private pokefinder: ServiceService) { }
 
   ngOnInit() {
-  }
+   this.pokemones = this.pokefinder.getPokemon();
 
-}
+
+  }
+  }
