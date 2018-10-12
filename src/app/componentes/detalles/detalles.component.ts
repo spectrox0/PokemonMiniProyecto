@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ServiceService } from 'src/app/servicios/pokefinder';
+
 
 @Component({
   selector: 'app-detalles',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallesComponent implements OnInit {
 
-  constructor() { }
+  pokemon = [];
+  pokemones = [];
 
-  ngOnInit() {
-  }
+    @Input('id') public id;
+
+ constructor(private pokefinder: ServiceService) { }
+
+ ngOnInit() {
+  this.pokemones = this.pokefinder.getPokemon();
+
+
+ }
 
 }

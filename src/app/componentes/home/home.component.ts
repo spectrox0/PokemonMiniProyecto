@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/servicios/pokefinder';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

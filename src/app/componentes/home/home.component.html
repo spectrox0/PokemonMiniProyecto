@@ -12,9 +12,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let pokemon of pokemones">
+          
               <td scope="col">{{pokemon.national_id}}</td>
             <td> <img class="img-responsive"	src="{{pokemon.art_url}}" alt=""></td>
-            <td>{{pokemon.name}}</td>
+            <td><button routerLink="./detalles">{{pokemon.name}}</button></td>
           </tr>
 
     </tbody>
