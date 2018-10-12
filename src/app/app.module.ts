@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { DetallesComponent } from './componentes/detalles/detalles.component';
+import { DataFinder } from './servicios/datafinder';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetallesComponent } from './componentes/detalles/detalles.component';
     TooltipModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DataFinder],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
