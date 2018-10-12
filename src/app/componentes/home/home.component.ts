@@ -7,6 +7,8 @@ import { ServiceService } from 'src/app/servicios/pokefinder';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  coupons: any;
+  pokemon = [];
 
    pokemones = [];
 

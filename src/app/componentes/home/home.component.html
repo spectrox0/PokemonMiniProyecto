@@ -1,11 +1,13 @@
 <div class="container">
   <h1> Pokedex </h1>
+  <div class="table-responsive-md">
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Imagen</th>
-        <th>Pokemon</th>
-        <th>Nro de Pokedex</th>
+        <th scope = "col">#</th>
+        <th scope = "col">Img</th>
+        <th scope = "col">Pokemon</th>
+
       </tr>
       <ul *ngFor="let pokemon of pokemones">
         <tr>
@@ -16,6 +18,13 @@
       </ul>
     </thead>
     <tbody>
+      
+      <tr>
+        <th scope="col">1</th>
+        <td></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   </div>
+</div>
