@@ -9,21 +9,14 @@
         <th scope = "col">Pokemon</th>
 
       </tr>
-      <ul *ngFor="let pokemon of pokemones">
-        <tr>
-        <td> <img src="{{pokemon.art_url}}" alt=""></td>
-        <td>{{pokemon.name}}</td>
-        <td>{{pokemon.national_id}}</td>
-      </tr>
-      </ul>
     </thead>
     <tbody>
-      
-      <tr>
-        <th scope="col">1</th>
-        <td></td>
-        <td></td>
-      </tr>
+        <tr *ngFor="let pokemon of pokemones">
+              <td scope="col">{{pokemon.national_id}}</td>
+            <td> <img class="img-responsive"	src="{{pokemon.art_url}}" alt=""></td>
+            <td>{{pokemon.name}}</td>
+          </tr>
+
     </tbody>
   </table>
   </div>

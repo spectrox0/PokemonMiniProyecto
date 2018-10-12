@@ -4,11 +4,12 @@ h1{
   color: rgb(255, 255, 255);
   font-size: 2.5em;
   margin:10px;
+  text-shadow: 0px 0px 15px aqua;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
-background: rgba(0, 255, 213, 0.5);
-box-shadow: 0px 0px 15px 1px black;
+background: rgba(0, 119, 255, 0.5);
+box-shadow: 0px 3px 15px 1px #094d6d;
 }
 
 .table{
@@ -21,17 +22,14 @@ font-family: fantasy;
 .table thead th{
 background: linear-gradient(#969595b2,#000000b2);
 color: rgb(47, 248, 255);
+text-shadow: 0px 0px 15px aqua;
 border-left: 2px ridge rgb(255, 255, 255);
 border-right: 2px ridge rgb(255, 255, 255);
 }
-button {
-float: right;
-border: ridge 2px red;
-background: black;
-color: greenyellow;
-margin-right: 10px;
-}
-button:hover {
-box-shadow: 0px 0px 15px crimson;
-font-weight: bold;
+.table img {
+  width: 10%;
+    max-width: 100px;
+    min-width: 70px;
+    height: auto;
+
 }
