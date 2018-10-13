@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiceService } from 'src/app/servicios/pokefinder';
+import { Pokemon } from 'src/app/pokemon';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { ServiceService } from 'src/app/servicios/pokefinder';
 })
 export class DetallesComponent implements OnInit {
 
-  pokemon = [];
+  pokemon : Pokemon;
   pokemones = [];
 
   id:number;
@@ -18,8 +19,8 @@ export class DetallesComponent implements OnInit {
 
  ngOnInit() {
   this.pokemones = this.pokefinder.getPokemon();
-  this.id = this.pokefinder.id;
-
+  this.id = this.pokefinder.id - 1;
+  this.pokemon = this.pokemones[this.id];
  }
 
 }
