@@ -30,11 +30,13 @@
                         <a *ngFor="let pokemones of pokemones">
                           <div *ngIf="evolucion.to==pokemones.name">
                               <img class="img-responsive"	src="{{pokemones.art_url}}" alt="">
+                            </div>
+                        </a>    
                         {{evolucion.to}}
                         {{evolucion.method}}
                         {{evolucion.level}}
-                      </div>
-                    </a>
+                      
+                    
                     </li>
                   </ul>
               </ng-template>
