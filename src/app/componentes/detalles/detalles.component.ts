@@ -15,6 +15,7 @@ export class DetallesComponent implements OnInit {
   evol: boolean = false;
   id:number;
   evoluciones = [];
+  tipos = [];
 
  constructor(private pokefinder: ServiceService) { }
 
@@ -22,6 +23,7 @@ export class DetallesComponent implements OnInit {
   this.pokemones = this.pokefinder.getPokemon();
   this.id = this.pokefinder.id - 1;
   this.pokemon = this.pokemones[this.id];
+  this.tipos = this.pokemon.types;
   if(this.pokemon.evolutions.length > 0){
     this.evol = true;
     this.evoluciones = this.pokemon.evolutions;
