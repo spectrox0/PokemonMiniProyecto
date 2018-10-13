@@ -9,8 +9,12 @@ import { Observable } from 'rxjs';
 export class ServiceService {
 
   private _url: string = "./assets/data/employees.json";
-
+  id: number;
   constructor(private http: HttpClient) { }
+
+  cambiarID(id:number){
+    this.id = id;
+  }
 
   getPokemon(){
     return  [

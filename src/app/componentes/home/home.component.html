@@ -11,11 +11,10 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pokemon of pokemones">
-          
+        <tr *ngFor="let pokemon of pokemones"  >
               <td scope="col">{{pokemon.national_id}}</td>
             <td> <img class="img-responsive"	src="{{pokemon.art_url}}" alt=""></td>
-            <td><button routerLink="./detalles">{{pokemon.name}}</button></td>
+            <td><button (click)="idtransmit()" routerLink="/detalles">{{pokemon.name}}</button></td>
           </tr>
 
     </tbody>

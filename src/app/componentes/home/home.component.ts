@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ServiceService } from 'src/app/servicios/pokefinder';
 
 
@@ -10,14 +10,17 @@ import { ServiceService } from 'src/app/servicios/pokefinder';
 export class HomeComponent implements OnInit {
   coupons: any;
   pokemon = [];
-
+  id: number;
    pokemones = [];
+
+   idtransmit(id:number){
+    this.pokefinder.cambiarID(id);
+   }
 
   constructor(private pokefinder: ServiceService) { }
 
   ngOnInit() {
    this.pokemones = this.pokefinder.getPokemon();
-
-
   }
+
   }

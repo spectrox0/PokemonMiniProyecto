@@ -12,13 +12,13 @@ export class DetallesComponent implements OnInit {
   pokemon = [];
   pokemones = [];
 
-    @Input('id') public id;
+  id:number;
 
  constructor(private pokefinder: ServiceService) { }
 
  ngOnInit() {
   this.pokemones = this.pokefinder.getPokemon();
-
+  this.id = this.pokefinder.id;
 
  }
 
