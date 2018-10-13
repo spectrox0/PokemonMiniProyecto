@@ -3,6 +3,7 @@
 color: aliceblue;
 border-radius: 12px;
 background: rgba(0, 0, 0, 0.5);
+color: aqua;
 }
 
 h2{
@@ -10,7 +11,14 @@ text-align: center;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 color:aqua;
 }
-
+.list-group-item{
+  color: aqua;
+  font-weight: bold;
+  font-family: fantasy;
+  margin: 2px;
+  background: rgba(0, 62, 197, 0.5);
+  text-align: center;
+}
 
 
 .row div {

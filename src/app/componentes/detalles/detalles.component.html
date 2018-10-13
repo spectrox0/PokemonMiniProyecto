@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row">
+      <div class="col-sm">
     <h2>{{pokemon.name}}</h2>
+    </div>
   </div>
 
   <div class="row">
@@ -18,27 +20,30 @@
       <div class="row">
           <div class="col-sm">
               <h2>Tipos</h2>
-            <ul *ngFor="let tipo of tipos">
-              <li>{{tipo}}</li>
+            <ul class="list-group" *ngFor="let tipo of tipos">
+              <li class="list-group-item">{{tipo}}</li>
             </ul>
             </div>
 
 
             <div *ngIf="evol; then thenBlock; else elseBlock" class="col-sm-7"></div>
               <ng-template #thenBlock>
-                <h2> Evolucion</h2>
-                  <ul *ngFor="let evolucion of evoluciones">
-                    <li>
+
+                  <ul class ="list-group" *ngFor="let evolucion of evoluciones">
+                    <li class= "list-group-item">
                         <a *ngFor="let pokemones of pokemones">
                           <div *ngIf="evolucion.to==pokemones.name">
+                             <h2> Evolucion</h2>
                               <img class="img-responsive"	src="{{pokemones.art_url}}" alt="">
-                            </div>
-                        </a>    
+
+                          <h3>Nombre</h3>
                         {{evolucion.to}}
+                        <h3> Metodo</h3>
                         {{evolucion.method}}
+                        <h3> Nivel</h3>
                         {{evolucion.level}}
-                      
-                    
+ </div>
+</a>
                     </li>
                   </ul>
               </ng-template>
@@ -46,8 +51,8 @@
                   <h2> Evolucion</h2>
                   <a>no tienen evolucion</a>
               </ng-template>
-                
-              
+
+
 
       </div>
   </div>
